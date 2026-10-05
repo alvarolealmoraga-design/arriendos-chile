@@ -1,0 +1,382 @@
+[
+{
+  "model": "inmuebles.inmueble",
+  "pk": 1,
+  "fields": {
+    "nombre": "Depto Providencia",
+    "descripcion": "Departamento luminoso a pasos del metro Los Leones",
+    "m2_construidos": "60.00",
+    "m2_totales": "65.00",
+    "estacionamientos": 1,
+    "habitaciones": 2,
+    "banos": 1,
+    "direccion": "Av. Providencia 1234",
+    "tipo_inmueble": 2,
+    "precio_mensual": "550000",
+    "disponible": true,
+    "comuna": 119,
+    "propietario": 2
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 2,
+  "fields": {
+    "nombre": "Casa Ñuñoa",
+    "descripcion": "Casa con patio y quincho, barrio tranquilo",
+    "m2_construidos": "120.00",
+    "m2_totales": "250.00",
+    "estacionamientos": 2,
+    "habitaciones": 3,
+    "banos": 2,
+    "direccion": "Irarrázaval 3000",
+    "tipo_inmueble": 1,
+    "precio_mensual": "900000",
+    "disponible": false,
+    "comuna": 116,
+    "propietario": 2
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 3,
+  "fields": {
+    "nombre": "Depto Las Condes",
+    "descripcion": "Departamento con vista a la cordillera y piscina",
+    "m2_construidos": "85.00",
+    "m2_totales": "95.00",
+    "estacionamientos": 2,
+    "habitaciones": 3,
+    "banos": 2,
+    "direccion": "Apoquindo 4500",
+    "tipo_inmueble": 2,
+    "precio_mensual": "850000",
+    "disponible": true,
+    "comuna": 110,
+    "propietario": 3
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 4,
+  "fields": {
+    "nombre": "Estudio Santiago Centro",
+    "descripcion": "Estudio amoblado cerca de la Alameda",
+    "m2_construidos": "30.00",
+    "m2_totales": "32.00",
+    "estacionamientos": 0,
+    "habitaciones": 1,
+    "banos": 1,
+    "direccion": "San Diego 500",
+    "tipo_inmueble": 2,
+    "precio_mensual": "350000",
+    "disponible": true,
+    "comuna": 128,
+    "propietario": 3
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 5,
+  "fields": {
+    "nombre": "Oficina Santiago Centro",
+    "descripcion": "Oficina equipada en edificio corporativo",
+    "m2_construidos": "45.00",
+    "m2_totales": "45.00",
+    "estacionamientos": 1,
+    "habitaciones": 0,
+    "banos": 1,
+    "direccion": "Huérfanos 1000",
+    "tipo_inmueble": 4,
+    "precio_mensual": "480000",
+    "disponible": true,
+    "comuna": 128,
+    "propietario": 4
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 6,
+  "fields": {
+    "nombre": "Casa Maipú",
+    "descripcion": "Casa familiar en condominio con áreas verdes",
+    "m2_construidos": "95.00",
+    "m2_totales": "180.00",
+    "estacionamientos": 1,
+    "habitaciones": 3,
+    "banos": 2,
+    "direccion": "Pajaritos 2000",
+    "tipo_inmueble": 1,
+    "precio_mensual": "600000",
+    "disponible": true,
+    "comuna": 115,
+    "propietario": 2
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 7,
+  "fields": {
+    "nombre": "Local Providencia",
+    "descripcion": "Local comercial a nivel de calle con vitrina",
+    "m2_construidos": "70.00",
+    "m2_totales": "70.00",
+    "estacionamientos": 0,
+    "habitaciones": 0,
+    "banos": 1,
+    "direccion": "Av. Providencia 2200",
+    "tipo_inmueble": 5,
+    "precio_mensual": "1200000",
+    "disponible": true,
+    "comuna": 119,
+    "propietario": 4
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 8,
+  "fields": {
+    "nombre": "Depto Viña del Mar",
+    "descripcion": "Departamento frente al mar con terraza",
+    "m2_construidos": "70.00",
+    "m2_totales": "80.00",
+    "estacionamientos": 1,
+    "habitaciones": 2,
+    "banos": 2,
+    "direccion": "Av. Perú 100",
+    "tipo_inmueble": 2,
+    "precio_mensual": "700000",
+    "disponible": false,
+    "comuna": 82,
+    "propietario": 3
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 9,
+  "fields": {
+    "nombre": "Casa Valparaíso",
+    "descripcion": "Casa en cerro Alegre con vista a la bahía",
+    "m2_construidos": "110.00",
+    "m2_totales": "140.00",
+    "estacionamientos": 0,
+    "habitaciones": 3,
+    "banos": 2,
+    "direccion": "Cerro Alegre 45",
+    "tipo_inmueble": 1,
+    "precio_mensual": "650000",
+    "disponible": true,
+    "comuna": 81,
+    "propietario": 2
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 10,
+  "fields": {
+    "nombre": "Depto Viña Reñaca",
+    "descripcion": "Departamento en Reñaca a pasos de la playa",
+    "m2_construidos": "65.00",
+    "m2_totales": "72.00",
+    "estacionamientos": 1,
+    "habitaciones": 2,
+    "banos": 1,
+    "direccion": "Av. Borgoño 15000",
+    "tipo_inmueble": 2,
+    "precio_mensual": "620000",
+    "disponible": true,
+    "comuna": 82,
+    "propietario": 4
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 11,
+  "fields": {
+    "nombre": "Casa La Serena",
+    "descripcion": "Casa a 5 cuadras de la playa",
+    "m2_construidos": "100.00",
+    "m2_totales": "200.00",
+    "estacionamientos": 2,
+    "habitaciones": 3,
+    "banos": 2,
+    "direccion": "Av. del Mar 3000",
+    "tipo_inmueble": 1,
+    "precio_mensual": "750000",
+    "disponible": true,
+    "comuna": 37,
+    "propietario": 3
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 12,
+  "fields": {
+    "nombre": "Depto Coquimbo",
+    "descripcion": "Departamento nuevo con vista a la bahía",
+    "m2_construidos": "58.00",
+    "m2_totales": "62.00",
+    "estacionamientos": 1,
+    "habitaciones": 2,
+    "banos": 2,
+    "direccion": "Costanera 1500",
+    "tipo_inmueble": 2,
+    "precio_mensual": "480000",
+    "disponible": true,
+    "comuna": 35,
+    "propietario": 4
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 13,
+  "fields": {
+    "nombre": "Depto Concepción",
+    "descripcion": "Departamento cerca de la Universidad de Concepción",
+    "m2_construidos": "55.00",
+    "m2_totales": "60.00",
+    "estacionamientos": 1,
+    "habitaciones": 2,
+    "banos": 1,
+    "direccion": "Barros Arana 800",
+    "tipo_inmueble": 2,
+    "precio_mensual": "420000",
+    "disponible": true,
+    "comuna": 241,
+    "propietario": 2
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 14,
+  "fields": {
+    "nombre": "Bodega Talcahuano",
+    "descripcion": "Bodega industrial con acceso para camiones",
+    "m2_construidos": "300.00",
+    "m2_totales": "400.00",
+    "estacionamientos": 3,
+    "habitaciones": 0,
+    "banos": 1,
+    "direccion": "Colón 5000",
+    "tipo_inmueble": 6,
+    "precio_mensual": "950000",
+    "disponible": true,
+    "comuna": 250,
+    "propietario": 4
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 15,
+  "fields": {
+    "nombre": "Parcela Puerto Varas",
+    "descripcion": "Parcela de agrado con casa y vista al lago",
+    "m2_construidos": "150.00",
+    "m2_totales": "5000.00",
+    "estacionamientos": 4,
+    "habitaciones": 4,
+    "banos": 3,
+    "direccion": "Camino a Ensenada km 8",
+    "tipo_inmueble": 3,
+    "precio_mensual": "1100000",
+    "disponible": true,
+    "comuna": 314,
+    "propietario": 3
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 16,
+  "fields": {
+    "nombre": "Casa Puerto Montt",
+    "descripcion": "Casa amplia en sector Pelluco",
+    "m2_construidos": "130.00",
+    "m2_totales": "300.00",
+    "estacionamientos": 2,
+    "habitaciones": 4,
+    "banos": 2,
+    "direccion": "Pelluco 250",
+    "tipo_inmueble": 1,
+    "precio_mensual": "780000",
+    "disponible": true,
+    "comuna": 313,
+    "propietario": 2
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 17,
+  "fields": {
+    "nombre": "Casa Temuco",
+    "descripcion": "Casa de dos pisos cerca del centro",
+    "m2_construidos": "105.00",
+    "m2_totales": "190.00",
+    "estacionamientos": 1,
+    "habitaciones": 3,
+    "banos": 2,
+    "direccion": "Av. Alemania 900",
+    "tipo_inmueble": 1,
+    "precio_mensual": "550000",
+    "disponible": true,
+    "comuna": 268,
+    "propietario": 4
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 18,
+  "fields": {
+    "nombre": "Depto Antofagasta",
+    "descripcion": "Departamento con vista al mar en el sector sur",
+    "m2_construidos": "75.00",
+    "m2_totales": "80.00",
+    "estacionamientos": 1,
+    "habitaciones": 3,
+    "banos": 2,
+    "direccion": "Av. Grecia 1800",
+    "tipo_inmueble": 2,
+    "precio_mensual": "720000",
+    "disponible": true,
+    "comuna": 12,
+    "propietario": 3
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 19,
+  "fields": {
+    "nombre": "Estacionamiento Las Condes",
+    "descripcion": "Estacionamiento subterráneo con acceso controlado",
+    "m2_construidos": "12.00",
+    "m2_totales": "12.00",
+    "estacionamientos": 1,
+    "habitaciones": 0,
+    "banos": 0,
+    "direccion": "Apoquindo 4500",
+    "tipo_inmueble": 7,
+    "precio_mensual": "60000",
+    "disponible": true,
+    "comuna": 110,
+    "propietario": 3
+  }
+},
+{
+  "model": "inmuebles.inmueble",
+  "pk": 20,
+  "fields": {
+    "nombre": "Casa Punta Arenas",
+    "descripcion": "Casa con calefacción central",
+    "m2_construidos": "115.00",
+    "m2_totales": "220.00",
+    "estacionamientos": 1,
+    "habitaciones": 3,
+    "banos": 2,
+    "direccion": "Av. Bulnes 700",
+    "tipo_inmueble": 1,
+    "precio_mensual": "680000",
+    "disponible": true,
+    "comuna": 339,
+    "propietario": 2
+  }
+}
+]

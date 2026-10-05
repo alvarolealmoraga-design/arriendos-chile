@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block titulo %}Acceso denegado{% endblock %}
+{% block contenido %}
+<div class="tarjeta angosta">
+  <h1>Acceso denegado (403)</h1>
+  <p>Tu usuario no tiene permiso para ver esta página.</p>
+  <p>Solo los arrendadores pueden publicar, editar o eliminar inmuebles, y solo los suyos.</p>
+  <a class="boton" href="{% url 'perfil' %}">Volver a mi perfil</a>
+</div>
+{% endblock %}

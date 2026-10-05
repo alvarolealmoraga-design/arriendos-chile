@@ -1,0 +1,252 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$NfGCGh6EdbFJ1XEPk0ui2R$8mMIJADQf5YNUuAbLpImK+Z5wcOVvTwBhdOXrw5/NSg=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@arriendos.cl",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-29T20:07:50.571Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$VbujspRuVYFSIwSkasijIy$UcVRDsgZ38Ja2PMY1QlrkVhT/NaehiSEzotybjX/YL0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jperez",
+    "first_name": "Juan",
+    "last_name": "Pérez",
+    "email": "jperez@mail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T20:07:50.896Z",
+    "groups": [
+      [
+        "Arrendadores"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$WVQ4Vg6hN9LuzGwrWUsDu3$74NzepF03vjfDcBypmpe8uiUzf+yDg8ZljEaF+jh0Uo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mgonzalez",
+    "first_name": "María",
+    "last_name": "González",
+    "email": "mgonzalez@mail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T20:07:51.204Z",
+    "groups": [
+      [
+        "Arrendadores"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$XNS1KDEGJR8M9SZ1N5o7UI$fSmZsfeKXfk20ZQG4L5OF5hT3DC0zvV/2aCvz3Sz+2A=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "crojas",
+    "first_name": "Carolina",
+    "last_name": "Rojas",
+    "email": "crojas@mail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T20:07:51.518Z",
+    "groups": [
+      [
+        "Arrendadores"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Yb6jyG0nmSaSOdknp1Rsl1$5DYNX0XphzLbf035b4pRjA5nvRSqZbFoRkOyN9vsyi0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "psoto",
+    "first_name": "Pedro",
+    "last_name": "Soto",
+    "email": "psoto@mail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T20:07:51.814Z",
+    "groups": [
+      [
+        "Arrendatarios"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$PwPAqBdJfbJoKS0Bk2CzAz$ecJhN4qCKmoE2nbLlJW946ejcc0tcu5ElcUq/BkxOAU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "fmunoz",
+    "first_name": "Francisca",
+    "last_name": "Muñoz",
+    "email": "fmunoz@mail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T20:07:52.118Z",
+    "groups": [
+      [
+        "Arrendatarios"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$C8MR2EERxFwKNUkMcZsGIw$xk8h70eEssvmJ1n/HBGQZcfQgqU7TOwZu2kwNmNZh30=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "dcastro",
+    "first_name": "Diego",
+    "last_name": "Castro",
+    "email": "dcastro@mail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T20:07:52.430Z",
+    "groups": [
+      [
+        "Arrendatarios"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Wm8Rqsh0r47ElbsZ5MBmkE$PFOqI2Vw2vmgTHBqg5Xhn/LPDAfNuIE67sOd7QB+PVY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "gestor",
+    "first_name": "Gabriela",
+    "last_name": "Torres",
+    "email": "gestor@arriendos.cl",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-10-01T19:10:50.705Z",
+    "groups": [
+      [
+        "Administradores"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "inmuebles.perfil",
+  "pk": 1,
+  "fields": {
+    "usuario": [
+      "jperez"
+    ],
+    "tipo_usuario": "arrendador",
+    "rut": "11.111.111-1",
+    "direccion": "",
+    "telefono": "+56911111111"
+  }
+},
+{
+  "model": "inmuebles.perfil",
+  "pk": 2,
+  "fields": {
+    "usuario": [
+      "mgonzalez"
+    ],
+    "tipo_usuario": "arrendador",
+    "rut": "22.222.222-2",
+    "direccion": "",
+    "telefono": "+56922222222"
+  }
+},
+{
+  "model": "inmuebles.perfil",
+  "pk": 3,
+  "fields": {
+    "usuario": [
+      "crojas"
+    ],
+    "tipo_usuario": "arrendador",
+    "rut": "44.444.444-4",
+    "direccion": "",
+    "telefono": "+56944444444"
+  }
+},
+{
+  "model": "inmuebles.perfil",
+  "pk": 4,
+  "fields": {
+    "usuario": [
+      "psoto"
+    ],
+    "tipo_usuario": "arrendatario",
+    "rut": "33.333.333-3",
+    "direccion": "",
+    "telefono": "+56933333333"
+  }
+},
+{
+  "model": "inmuebles.perfil",
+  "pk": 5,
+  "fields": {
+    "usuario": [
+      "fmunoz"
+    ],
+    "tipo_usuario": "arrendatario",
+    "rut": "55.555.555-5",
+    "direccion": "",
+    "telefono": "+56955555555"
+  }
+},
+{
+  "model": "inmuebles.perfil",
+  "pk": 6,
+  "fields": {
+    "usuario": [
+      "dcastro"
+    ],
+    "tipo_usuario": "arrendatario",
+    "rut": "66.666.666-6",
+    "direccion": "",
+    "telefono": ""
+  }
+}
+]

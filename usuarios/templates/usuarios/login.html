@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block titulo %}Iniciar sesión{% endblock %}
+{% block contenido %}
+<div class="tarjeta angosta">
+  <h1>Iniciar sesión</h1>
+  {% if form.errors %}
+    <div class="mensaje error">Usuario o contraseña incorrectos. Inténtalo de nuevo.</div>
+  {% endif %}
+  {% if next and not user.is_authenticated %}
+    <div class="mensaje error">Debes iniciar sesión para ver esa página.</div>
+  {% endif %}
+  <form method="post">
+    {% csrf_token %}
+    <label for="{{ form.username.id_for_label }}">Nombre de usuario</label>
+    {{ form.username }}
+    <label for="{{ form.password.id_for_label }}">Contraseña</label>
+    {{ form.password }}
+    <input type="hidden" name="next" value="{{ next }}">
+    <button class="boton" type="submit">Ingresar</button>
+  </form>
+  <p>¿No tienes cuenta? <a href="{% url 'registro' %}">Regístrate aquí</a></p>
+</div>
+{% endblock %}

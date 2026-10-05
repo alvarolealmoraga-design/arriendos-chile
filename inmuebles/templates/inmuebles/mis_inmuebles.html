@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load formato %}
+{% block titulo %}Mis inmuebles{% endblock %}
+{% block contenido %}
+<div class="tarjeta">
+  <h1>Mis inmuebles</h1>
+  <a class="boton" href="{% url 'publicar_inmueble' %}">+ Publicar inmueble</a>
+  <table style="margin-top:16px">
+    <thead>
+      <tr><th>Nombre</th><th>Tipo</th><th>Comuna</th><th>Precio mensual</th><th>Estado</th><th>Acciones</th></tr>
+    </thead>
+    <tbody>
+      {% for inmueble in inmuebles %}
+        <tr>
+          <td><strong>{{ inmueble.nombre }}</strong><br><span class="ayuda">{{ inmueble.direccion }}</span></td>
+          <td>{{ inmueble.tipo_inmueble.nombre }}</td>
+          <td>{{ inmueble.comuna.nombre }}</td>
+          <td>{{ inmueble.precio_mensual|pesos }}</td>
+          <td>{% if inmueble.disponible %}<span class="estado si">Disponible</span>{% else %}<span class="estado no">Arrendado</span>{% endif %}</td>
+          <td>
+            <a class="boton chico secundario" href="{% url 'editar_inmueble' inmueble.pk %}">Editar</a>
+            <a class="boton chico peligro" href="{% url 'eliminar_inmueble' inmueble.pk %}">Eliminar</a>
+          </td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="6">Aún no has publicado inmuebles.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

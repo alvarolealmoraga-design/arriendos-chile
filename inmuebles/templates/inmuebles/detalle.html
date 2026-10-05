@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load formato %}
+{% block titulo %}{{ inmueble.nombre }}{% endblock %}
+{% block contenido %}
+<div class="tarjeta">
+  <p><a href="{% url 'listado_inmuebles' %}">&larr; Volver al listado</a></p>
+  <h1>{{ inmueble.nombre }}</h1>
+  <p>
+    <span class="etiqueta">{{ inmueble.tipo_inmueble.nombre }}</span>
+    <span class="etiqueta">{{ inmueble.comuna.nombre }}, {{ inmueble.comuna.region.nombre }}</span>
+  </p>
+  <p>{{ inmueble.descripcion }}</p>
+  <h2>{{ inmueble.precio_mensual|pesos }} <span class="ayuda" style="display:inline;font-size:15px">al mes</span></h2>
+  <dl class="datos">
+    <dt>Dirección</dt><dd>{{ inmueble.direccion }}</dd>
+    <dt>Habitaciones</dt><dd>{{ inmueble.habitaciones }}</dd>
+    <dt>Baños</dt><dd>{{ inmueble.banos }}</dd>
+    <dt>Estacionamientos</dt><dd>{{ inmueble.estacionamientos }}</dd>
+    <dt>m² construidos</dt><dd>{{ inmueble.m2_construidos|floatformat:0 }}</dd>
+    <dt>m² totales</dt><dd>{{ inmueble.m2_totales|floatformat:0 }}</dd>
+  </dl>
+  <div class="seccion">
+    <h2>Contacto del arrendador</h2>
+    <dl class="datos">
+      <dt>Nombre</dt><dd>{{ inmueble.propietario.get_full_name|default:inmueble.propietario.username }}</dd>
+      <dt>Correo</dt><dd>{{ inmueble.propietario.email|default:"-" }}</dd>
+      <dt>Teléfono</dt><dd>{{ inmueble.propietario.perfil.telefono|default:"-" }}</dd>
+    </dl>
+  </div>
+</div>
+{% endblock %}

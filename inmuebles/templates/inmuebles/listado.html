@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load formato %}
+{% block titulo %}Inmuebles{% endblock %}
+{% block contenido %}
+<div class="tarjeta">
+  <h1>Inmuebles disponibles para arriendo</h1>
+  <form method="get" class="filtros">
+    {% for campo in filtro %}
+      <div>
+        <label for="{{ campo.id_for_label }}">{{ campo.label }}</label>
+        {{ campo }}
+        {{ campo.errors }}
+      </div>
+    {% endfor %}
+    <div class="filtros-botones">
+      <button class="boton" type="submit">Filtrar</button>
+      <a class="boton secundario" href="{% url 'listado_inmuebles' %}">Limpiar</a>
+    </div>
+  </form>
+  <p class="ayuda" style="font-size:14px">Mostrando {{ inmuebles|length }} de {{ total }} inmuebles disponibles.</p>
+  <table>
+    <thead>
+      <tr><th>Nombre</th><th>Tipo</th><th>Comuna</th><th>Región</th><th>Hab.</th><th>Baños</th><th>Precio mensual</th><th></th></tr>
+    </thead>
+    <tbody>
+      {% for inmueble in inmuebles %}
+        <tr>
+          <td><strong>{{ inmueble.nombre }}</strong><br><span class="ayuda">{{ inmueble.descripcion }}</span></td>
+          <td>{{ inmueble.tipo_inmueble.nombre }}</td>
+          <td>{{ inmueble.comuna.nombre }}</td>
+          <td>{{ inmueble.comuna.region.nombre }}</td>
+          <td>{{ inmueble.habitaciones }}</td>
+          <td>{{ inmueble.banos }}</td>
+          <td>{{ inmueble.precio_mensual|pesos }}</td>
+          <td><a class="boton chico secundario" href="{% url 'detalle_inmueble' inmueble.pk %}">Ver</a></td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="8">No hay inmuebles que coincidan con la búsqueda.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

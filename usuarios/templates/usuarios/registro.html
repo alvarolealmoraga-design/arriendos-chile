@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block titulo %}Registro{% endblock %}
+{% block contenido %}
+<div class="tarjeta angosta">
+  <h1>Crear cuenta</h1>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {% for campo in form %}
+      <label for="{{ campo.id_for_label }}">{{ campo.label }}</label>
+      {{ campo }}
+      {{ campo.errors }}
+      {% if campo.help_text %}<span class="ayuda">{{ campo.help_text|safe }}</span>{% endif %}
+    {% endfor %}
+    <button class="boton" type="submit">Registrarme</button>
+  </form>
+  <p>¿Ya tienes cuenta? <a href="{% url 'login' %}">Inicia sesión</a></p>
+</div>
+{% endblock %}

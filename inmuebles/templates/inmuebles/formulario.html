@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block titulo %}{{ titulo }}{% endblock %}
+{% block contenido %}
+<div class="tarjeta">
+  <h1>{{ titulo }}</h1>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <div class="grilla">
+      {% for campo in form %}
+        <div>
+          <label for="{{ campo.id_for_label }}">{{ campo.label|capfirst }}</label>
+          {{ campo }}
+          {{ campo.errors }}
+        </div>
+      {% endfor %}
+    </div>
+    <button class="boton" type="submit">{{ boton }}</button>
+    <a class="boton secundario" href="{% url 'mis_inmuebles' %}">Cancelar</a>
+  </form>
+</div>
+{% endblock %}

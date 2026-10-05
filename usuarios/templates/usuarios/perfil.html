@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block titulo %}Mi perfil{% endblock %}
+{% block contenido %}
+<div class="tarjeta">
+  <div class="perfil-cabecera">
+    <div class="avatar">{{ user.first_name|default:user.username|first|upper }}</div>
+    <div>
+      <h1 style="margin:0">{{ user.get_full_name|default:user.username }}</h1>
+      {% if perfil %}
+        <span class="etiqueta">{{ perfil.get_tipo_usuario_display }}</span>
+      {% elif user.is_superuser %}
+        <span class="etiqueta">Superusuario</span>
+      {% endif %}
+      {% for grupo in user.groups.all %}<span class="etiqueta">Grupo: {{ grupo.name }}</span>{% endfor %}
+    </div>
+  </div>
+
+  <div class="seccion">
+    <h2>Datos personales</h2>
+    <dl class="datos">
+      <dt>Nombre de usuario</dt><dd>{{ user.username }}</dd>
+      <dt>Nombre</dt><dd>{{ user.first_name|default:"-" }}</dd>
+      <dt>Apellido</dt><dd>{{ user.last_name|default:"-" }}</dd>
+      <dt>Correo electrónico</dt><dd>{{ user.email|default:"-" }}</dd>
+      {% if perfil %}
+        <dt>RUT</dt><dd>{{ perfil.rut }}</dd>
+        <dt>Teléfono</dt><dd>{{ perfil.telefono|default:"-" }}</dd>
+        <dt>Dirección</dt><dd>{{ perfil.direccion|default:"-" }}</dd>
+        <dt>Tipo de usuario</dt><dd>{{ perfil.get_tipo_usuario_display }}</dd>
+      {% endif %}
+      <dt>Miembro desde</dt><dd>{{ user.date_joined|date:"d/m/Y" }}</dd>
+      <dt>Último ingreso</dt><dd>{{ user.last_login|date:"d/m/Y H:i"|default:"-" }}</dd>
+    </dl>
+    <a class="boton" href="{% url 'editar_perfil' %}">Modificar mis datos</a>
+  </div>
+
+  {% if perfil.tipo_usuario == "arrendador" %}
+    <div class="seccion">
+      <h2>Mis inmuebles</h2>
+      <p>
+        <span class="etiqueta">Publicados: {{ resumen.total }}</span>
+        <span class="etiqueta">Disponibles: {{ resumen.disponibles }}</span>
+        <span class="etiqueta">Arrendados: {{ resumen.arrendados }}</span>
+      </p>
+      <a class="boton" href="{% url 'mis_inmuebles' %}">Administrar mis inmuebles</a>
+      <a class="boton secundario" href="{% url 'publicar_inmueble' %}">+ Publicar inmueble</a>
+    </div>
+  {% elif perfil.tipo_usuario == "arrendatario" %}
+    <div class="seccion">
+      <h2>Buscar arriendo</h2>
+      <p>Como arrendatario puedes revisar todos los inmuebles disponibles para arriendo.</p>
+      <a class="boton" href="{% url 'listado_inmuebles' %}">Ver inmuebles disponibles</a>
+    </div>
+  {% endif %}
+
+  <div class="seccion">
+    <h2>Mis permisos</h2>
+    <p>{% for permiso in permisos %}<span class="etiqueta">{{ permiso }}</span>{% empty %}Sin permisos sobre inmuebles.{% endfor %}</p>
+  </div>
+</div>
+{% endblock %}
